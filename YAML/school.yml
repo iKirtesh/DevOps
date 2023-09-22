@@ -1,0 +1,7 @@
+School:
+  - name: DPS
+    principal: Someone
+    Students:
+      - rollno: 12
+        name: Kirtesh
+        marks: 78

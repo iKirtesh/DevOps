@@ -1,0 +1,78 @@
+student: !!seq
+  - marks
+  - name
+  - roll_no
+---
+# like this also
+student: !!seq [new delhi, mumbai, pune]
+---
+# some of these keys of seq will be empty
+# sparse seq
+sparse seq:
+  - how
+  - who
+  -
+  - Null
+  - sup
+---
+# Nested sequence
+- - apple
+  - mango
+  - banana
+- - marks
+  - roll number
+  - date
+---
+# key value pair are called maps
+# !!map
+---
+# Nested mappings: map within a map
+name: Kirtesh Admute
+roll:
+  age: 23
+  job: student
+
+# Pairs: key may have duplicate values
+# !!pairs
+pair example: !!pairs
+  - job: student
+  - job: student
+# this will be an array of hashtables
+
+# !!set will allow you to have unique values
+names: !!set
+  ? Kirtesh
+  ? Poonam
+---
+# Dictionary !!omap
+people: !!omap
+  - Kirtesh:
+      - name: Kirtesh Admute
+      - age: 23
+  - Pooname:
+      - name: Poonam Admute
+      - age: 25
+---
+# Reusing Some Properties using an anchors
+likings: &likes
+  fav fruit: mango
+  dislike: grapes
+
+person1:
+  name: Kirtesh
+  <<: *likes
+
+person2:
+  name: Poonam
+  <<: *likes
+  dislike: berries
+
+# this is it look like
+# person2:
+#   name: Poonam
+#   <<: *likes
+#   dislike: berries
+
+person3:
+  name: KT
+  <<: *likes

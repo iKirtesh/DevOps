@@ -1,0 +1,46 @@
+# String Varibles
+myself: Kirtesh Admute
+fruit: "apple"
+job: "SDE"
+---
+bio: |
+  I am Kirtesh Admute.
+  I am a very cool dude.
+---
+# Write a single line in multiple lines
+message: >
+  Hi, I am Kirtesh
+  Studying IT Automation
+  In Devops.
+---
+# Same as
+message: Hi, I am Kirtesh Studying IT Automation In Devops.
+---
+number: 6298
+marks: 75.89
+boolean: No # n, N, falase, False, FALSE
+# Same as ->  y, y, yes, Yes
+
+---
+# Specify the type
+zero: !!int 0
+positiveNum: !!int 34
+negativeNum: !!int -34
+binaryNum: !!int 0B1001
+octalNum: !!int 0o6574
+hexaNum: !!int 0x45
+commaValue: !!int 500000 # 500,000
+exponential number: 6.023E56
+---
+# Floating point number
+simpleNumber: !!float 56.90
+infinite: !!float .inf
+not a num: nan
+---
+# null
+surname: !!null null # null, Null. ~
+~: this is a null key
+---
+# dates and time
+date: !!timestamp 2023-09-22
+india time: 2023-08-23T02:34:45 +05:30
